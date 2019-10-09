@@ -1,0 +1,10 @@
+<div ng-show="loading" class="lds-ellipsis" ng-show="loading"><div></div><div></div><div></div><div></div></div>
+<a ng-href="#!/content/{{name}}"><h4>< Return</h4></a>
+<div ng-hide="loading">
+    <h1>{{details.Name}}</h1>
+    <h3>{{details.Description}}</h3>
+    <br><br><br>
+    <h4>From patch {{details.GamePatch.Name}}</h4>
+    <img ng-src="{{details.GamePatch.Banner}}" max-width="200" max-height="300">
+</div>
+

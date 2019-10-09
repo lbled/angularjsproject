@@ -10,7 +10,8 @@
  */
 angular
   .module('angularjsprojectApp', [
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -21,8 +22,15 @@ angular
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+        controller: 'AboutCtrl'
+      })
+      .when('/content/:name', {
+        templateUrl: 'views/content.html',
+        controller: 'ContentCtrl'
+      })
+      .when('/content/:name/:id', {
+        templateUrl: 'views/contentdetails.html',
+        controller: 'ContentdetailsCtrl'
       })
       .otherwise({
         redirectTo: '/'
