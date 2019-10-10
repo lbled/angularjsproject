@@ -24,11 +24,11 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-      .when('/content/:name', {
+      .when('/gameContent/:name', {
         templateUrl: 'views/content.html',
         controller: 'ContentCtrl'
       })
-      .when('/content/:name/:id', {
+      .when('/gameContent/:name/:id', {
         templateUrl: 'views/contentdetails.html',
         controller: 'ContentdetailsCtrl'
       })
