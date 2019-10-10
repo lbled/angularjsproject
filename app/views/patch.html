@@ -1,0 +1,15 @@
+<div ng-show="loading" class="lds-ellipsis" ng-show="loading"><div></div><div></div><div></div><div></div></div>
+<div ng-hide="loading">
+    <div ng-repeat="patch in patchs">
+        <h3>{{patch.Name ? patch.Name : patch.ID}}</h3>
+        <div class="patchBanner">
+            <img ng-src="{{patch.Banner}}" width="400">
+        </div>
+        <br>
+        <h4><a ng-show="patch.PatchNotes" ng-href="{{patch.PatchNotes}}" target="_blank">Patch notes</a></h4>
+        <div class="patchReleaseDate">
+            Release date: {{patch.ReleaseDate*1000 | date:'dd MMM yyyy'}}
+        </div>
+        <hr>
+    </div>  
+</div>

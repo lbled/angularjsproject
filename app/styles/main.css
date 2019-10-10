@@ -7,6 +7,16 @@
 
 body {
   padding: 0;
+  background-color: #d4e9f8;
+}
+
+.navbar-default {
+    background-color: #c1e2f9;
+    border-color: #eb9b4d;
+}
+
+hr {
+    border-top: 2px solid #eb9b4d;
 }
 
 .banner {
@@ -70,6 +80,18 @@ body {
     display: block;
     padding-top: 14px;
     padding-bottom: 14px;
+}
+
+.icon {
+    margin-right: 20px;
+}
+
+.patchBanner {
+    text-align: center;
+}
+
+.patchReleaseDate {
+    text-align: right;
 }
 
 /* Responsive: Portrait tablets and up */

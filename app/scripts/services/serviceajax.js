@@ -22,6 +22,9 @@ angular.module('angularjsprojectApp')
         },
         getServers: function () {
             return $http.get(serverAdress + 'servers');
+        },
+        getPatchs: function() {
+            return $http.get(serverAdress + 'patchlist');
         }
     };
   });

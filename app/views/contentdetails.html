@@ -1,10 +1,10 @@
 <div ng-show="loading" class="lds-ellipsis" ng-show="loading"><div></div><div></div><div></div><div></div></div>
 <a type="button" class="btn btn-success" ng-href="#!/gameContent/{{name}}"><span class="glyphicon glyphicon-chevron-left"></span> Return</a>
 <div ng-hide="loading">
-    <h1>{{details.Name}}</h1>
+    <div><img class="icon" ng-src="https://xivapi.com{{details.IconSmall ? details.IconSmall : details.Icon}}" max-width="100" max-height="200" align="left"> <h1>{{details.Name}}</h1></div>
     <h3>{{details.Description}}</h3>
     <br><br><br>
-    <h4>From patch {{details.GamePatch.Name}}</h4>
+    <h4>From {{details.GamePatch.Name}}</h4>
     <img ng-src="{{details.GamePatch.Banner}}" max-width="200" max-height="300">
 </div>
 
