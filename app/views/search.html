@@ -1,0 +1,33 @@
+<form class="form-horizontal col-md-8 col-md-offset-2 searchAction searchChar" role="form">
+    <table>
+        <div class="input-group">
+            <tr>
+                <td>
+                    <h4>Name: </h4>
+                </td>
+                <td>
+                    <input ng-model="name" type="text" class="form-control" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Server: </h4>
+                </td>
+                <td>
+                    <select class="form-control" name="repeatSelect" id="repeatSelect" ng-model="server">
+                        <option ng-repeat="server in servers" value="{{server}}">{{server}}</option>
+                    </select>
+                          
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="searchBtn">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info" ng-click="searchAction()"><i class="fa fa-search"></i>  Search</button>
+                    </span>
+                </td>
+            </tr>
+        </div>
+    </table>
+</form>

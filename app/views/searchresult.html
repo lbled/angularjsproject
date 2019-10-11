@@ -1,0 +1,18 @@
+<div ng-show="loading" class="lds-ellipsis" ng-show="loading"><div></div><div></div><div></div><div></div></div>
+<div ng-hide="loading">
+    <a type="button" class="btn btn-info" ng-href="#!/search"><i class="fas fa-chevron-circle-left"></i> Return</a>
+    <div ng-repeat="character in characters">
+        <img class="icon" ng-src="{{character.Avatar}}" width="85" align="left"><a ng-href="#!/charDetails/{{character.ID}}"><h4>{{character.Name}}</h4></a>
+        <div>Lang: {{character.Lang}}</div>
+        <div>Server: {{character.Server}}</div>
+        <hr>
+    </div>    
+    <div> <h1>{{details.Name}}</h1></div>
+    <img ng-src="{{details.GamePatch.Banner}}" max-width="200" max-height="300">
+    <div class="row">
+        <div class="col-md-9 col-md-offset-3">
+            <ul uib-pagination total-items="totalResults" ng-model="currentPage" ng-change="pageChanged()" items-per-page="totalPerPage" max-size="5" boundary-links="true"></ul>
+        </div>
+    </div>
+</div>
+

@@ -15,12 +15,32 @@ body {
     border-color: #eb9b4d;
 }
 
+.navbar-default .navbar-nav > li > a {
+    color: #337ab7;
+}
+
 hr {
     border-top: 2px solid #eb9b4d;
 }
 
 .banner {
     width: 100%;
+}
+
+.searchChar table {
+    text-align: right;
+}
+
+.searchChar td {
+    padding: 10px;
+}
+
+.searchChar select {
+    width: 100%;
+}
+
+.searchChar .searchBtn {
+    float: right;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -49,6 +69,7 @@ hr {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+  text-align: center;
 }
 
 .container-narrow > hr {
@@ -74,7 +95,6 @@ hr {
 }
 
 #dropdownMenuButton {
-    color: #777;
     text-decoration: none;
     position: relative;
     display: block;

@@ -20,11 +20,17 @@ angular.module('angularjsprojectApp')
         getContentDetails: function(name, id) {
             return $http.get(serverAdress + name + '/' + id);
         },
+        getPatchs: function() {
+            return $http.get(serverAdress + 'patchlist');
+        },
         getServers: function () {
             return $http.get(serverAdress + 'servers');
         },
-        getPatchs: function() {
-            return $http.get(serverAdress + 'patchlist');
+        search: function(query, page) {
+            return $http.get(serverAdress + 'character/search' + query + '&page=' + page);
+        },
+        getCharacter: function(id) {
+            return $http.get(serverAdress + 'character/' + id);
         }
     };
   });

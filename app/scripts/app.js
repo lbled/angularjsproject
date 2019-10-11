@@ -31,6 +31,19 @@ angular
             templateUrl: 'views/about.html',
             controller: 'AboutCtrl'
         })
+        .when('/search', {
+          templateUrl: 'views/search.html',
+          controller: 'SearchCtrl',
+          controllerAs: 'search'
+        })
+        .when('/searchResult:query', {
+          templateUrl: 'views/searchresult.html',
+          controller: 'SearchresultCtrl'
+        })
+        .when('/charDetails/:id', {
+          templateUrl: 'views/chardetails.html',
+          controller: 'ChardetailsCtrl'
+        })
         .otherwise({
             redirectTo: '/patch'
         });
