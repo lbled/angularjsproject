@@ -25,7 +25,7 @@ angular.module('angularjsprojectApp')
 
         $scope.pageChanged = function() {
             search();
-        }
+        };
 
         search();
     });

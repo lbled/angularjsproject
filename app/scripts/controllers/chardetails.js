@@ -14,5 +14,6 @@ angular.module('angularjsprojectApp')
         serviceAjax.getCharacter(id).then(function(res) {
             $scope.loading = false;
             $scope.character = res.data.Character;
+            $scope.jobs = res.data.Character.ClassJobs;
         });
     });

@@ -24,5 +24,5 @@ angular.module('angularjsprojectApp')
 
         var buildQuery = function() {
             query = '?name=' + $scope.name + '&server=' + $scope.server;
-        }
+        };
     });

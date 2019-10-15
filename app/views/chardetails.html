@@ -1,6 +1,23 @@
 <div ng-show="loading" class="lds-ellipsis" ng-show="loading"><div></div><div></div><div></div><div></div></div>
 <div ng-hide="loading">
     <a type="button" class="btn btn-info" ng-href="#!/search"><i class="fas fa-chevron-circle-left"></i> Return</a>
-    <h1>{{character.Name}}</h1>
-    <img class="icon" ng-src="{{character.Portrait}}" width="500">
+    <span class="col-md-10 col-md-offset-2">
+        <h1>{{character.Name}}</h1> 
+        <h4>{{character.Nameday}}</h4> 
+        <h4>(Last update: {{character.ParseDate * 1000 | date:'dd MMM yyyy'}})</h4>
+    </span>
+    <div class="col-md-10 col-md-offset-2">
+        <img align="right" class="icon" ng-src="{{character.Portrait}}" width="500">
+        <h4>Active Job: {{character.ActiveClassJob.Name | jobname}} lvl {{character.ActiveClassJob.Level}}</h4>
+        <div>
+            <uib-progressbar class="progress-striped active" max="character.ActiveClassJob.ExpLevelMax" value="character.ActiveClassJob.ExpLevel"><i>{{character.ActiveClassJob.ExpLevel / character.ActiveClassJob.ExpLevelMax * 100 | number:0}}%</i></uib-progressbar>
+        </div>
+        <h4>Job: </h4> 
+        <div ng-repeat="job in jobs" ng-show="job.Level !== 0 && job.ClassID !== character.ActiveClassJob.ClassID">
+            {{job.Name | jobname}} lvl {{job.Level}}
+            <div>
+                <uib-progressbar class="progress-striped active" max="job.ExpLevelMax" value="job.ExpLevel"><i>{{job.ExpLevel / job.ExpLevelMax * 100  | number:0}}%</i></uib-progressbar>
+            </div>
+        </div>
+    </div>
 </div>
